@@ -1,1 +1,6 @@
-# intercms
+# InterCMS
+
+
+Opis projektu InterCMS
+
+
