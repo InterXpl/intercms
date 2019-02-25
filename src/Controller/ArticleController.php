@@ -30,18 +30,18 @@ class ArticleController extends AbstractController
           'title' => 'artykuł 1',
           'content' => 'Zawartość artykułu 1',
         ],
-          [
-            'title' => 'artykuł 2',
-            'content' => 'Zawartość artykułu 2',
-          ],
-            [
-              'title' => 'artykuł 3',
-              'content' => 'Zawartość artykułu 3',
-            ],
-              [
-                'title' => 'artykuł 4',
-                'content' => 'Zawartość artykułu 4',
-              ],
+        [
+          'title' => 'artykuł 2',
+          'content' => 'Zawartość artykułu 2',
+        ],
+        [
+          'title' => 'artykuł 3',
+          'content' => 'Zawartość artykułu 3',
+        ],
+        [
+          'title' => 'artykuł 4',
+          'content' => 'Zawartość artykułu 4',
+        ],
       ];
 
       return $this->render('article/index.html.twig',[

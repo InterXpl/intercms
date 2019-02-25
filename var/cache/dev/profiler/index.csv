@@ -147,3 +147,6 @@ f46610,127.0.0.1,GET,http://127.0.0.1:8000/news/test-adf,1550847649,,500
 025ea0,127.0.0.1,GET,http://127.0.0.1:8000/news/test-adf,1550848231,,500
 9e9f1c,127.0.0.1,GET,http://127.0.0.1:8000/news/test-adf,1550848248,,200
 fba1d4,127.0.0.1,GET,http://127.0.0.1:8000/news/why-asteroids-taste-like-tacos,1550849735,,200
+ec1950,127.0.0.1,GET,http://127.0.0.1:8000/news/why-asteroids-taste-like-tacos,1551100816,,200
+74143f,127.0.0.1,GET,http://127.0.0.1:8000/favicon.ico,1551100817,b1b185,200
+b1b185,127.0.0.1,GET,http://127.0.0.1:8000/favicon.ico,1551100817,,404
