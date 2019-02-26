@@ -85,6 +85,6 @@ class __TwigTemplate_796f8e0b6049fccaf76aedac4f766d18f75f578b5037702aad520cf7d9c
 
 <hr>
 {% endfor %}
-", "article/index.html.twig", "/var/www/html/symphony/pierwszy-projekt/templates/article/index.html.twig");
+", "article/index.html.twig", "/var/www/html/symphony/intercms/templates/article/index.html.twig");
     }
 }

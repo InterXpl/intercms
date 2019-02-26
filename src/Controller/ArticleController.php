@@ -11,13 +11,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ArticleController extends AbstractController
 {
-  /**
-   * @Route("/")
-   */
-    public function homepage()
-    {
-        return new Response('OMG! My first page already! WOOO!');
-    }
 
       /**
        * @Route("/news/{slug}")

@@ -20,8 +20,8 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
             '/_profiler/search_bar' => array(array(array('_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'), null, null, null, false, false, null)),
             '/_profiler/phpinfo' => array(array(array('_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'), null, null, null, false, false, null)),
             '/_profiler/open' => array(array(array('_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'), null, null, null, false, false, null)),
-            '/' => array(array(array('_route' => 'app_article_homepage', '_controller' => 'App\\Controller\\ArticleController::homepage'), null, null, null, false, false, null)),
             '/lucky/number' => array(array(array('_route' => 'app_lucky_number', '_controller' => 'App\\Controller\\LuckyController::number'), null, null, null, false, false, null)),
+            '/' => array(array(array('_route' => 'app_site_index', '_controller' => 'App\\Controller\\SiteController::index'), null, null, null, false, false, null)),
         );
         $this->regexpList = array(
             0 => '{^(?'
