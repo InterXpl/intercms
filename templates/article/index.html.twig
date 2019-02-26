@@ -1,0 +1,9 @@
+Test artykułu z twig, url: {{ slug }}
+
+
+{% for artykul in artykuly %}
+<h3>{{ artykul.title }}</h3>
+<p>{{ artykul.content }}</p>
+
+<hr>
+{% endfor %}
