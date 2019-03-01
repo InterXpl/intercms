@@ -20,12 +20,27 @@ class AdminController extends AbstractController
 			$post = $request->request->all();
 			if (isset($post['login'])) {
 				if ($post['login'] == 'admin' && $post['haslo'] == 'admin123') {
-					return $this->redirectToRoute('panel');
 				}
 			}
 		}
 
+
+		$form = $this->createFormBuilder($task)
+		            ->add('task', TextType::class)
+		            ->add('dueDate', DateType::class)
+		            ->add('save', SubmitType::class, ['label' => 'Create Task'])
+		            ->getForm();
+
+						    $form->handleRequest($request);
+
+						    if ($form->isSubmitted() && $form->isValid()) {
+						        $task = $form->getData();
+
+
+										return $this->redirectToRoute('panel');
+						    }
 		return $this->render('admin/login.html.twig', [
+			'form' => $form
 		]);
 	}
 
@@ -38,7 +53,7 @@ class AdminController extends AbstractController
 		return $this->render('admin/panel.html.twig', [
 		]);
 	}
-	
+
 	/**
 	 * @Route("/admin/wpisy", name="wpisy")
 	 */
@@ -47,7 +62,7 @@ class AdminController extends AbstractController
 		return $this->render('admin/panel.html.twig', [
 		]);
 	}
-	
+
 	/**
 	 * @Route("/admin/kategorie", name="kategorie")
 	 */
@@ -56,7 +71,7 @@ class AdminController extends AbstractController
 		return $this->render('admin/panel.html.twig', [
 		]);
 	}
-	
+
 	/**
 	 * @Route("/admin/wyloguj", name="wyloguj")
 	 */

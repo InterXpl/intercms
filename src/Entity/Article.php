@@ -3,11 +3,12 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+//use App\Entity\Category as Category;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\ArticleRepository")
  */
-class User
+class Article
 {
     /**
      * @ORM\Id()
@@ -16,16 +17,32 @@ class User
      */
     private $id;
 
+	
     /**
-     * @ORM\Column(type="string", length=64)
+     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="articles")
      */
-    private $login;
+    private $category;
 
     /**
      * @ORM\Column(type="string", length=64)
      */
-    private $password;
+    private $title;
 
+    /**
+     * @ORM\Column(type="string", length=64)
+     */
+    private $content;
+
+    /**
+     * @ORM\Column(type="datetime", name="created_at")
+     */
+    private $createdAt;
+	
+    /**
+     * @ORM\Column(type="datetime", name="updated_at")
+     */
+    private $updatedAt;
+	
     public function getId(): int
     {
         return $this->id;
