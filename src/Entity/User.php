@@ -31,7 +31,7 @@ class User
         return $this->id;
     }
 
-    public function getLogin(): string
+    public function getLogin(): ?string
     {
         return $this->login;
     }
@@ -43,7 +43,7 @@ class User
         return $this;
     }
 
-    public function getPassword(): string
+    public function getPassword(): ?string
     {
         return $this->password;
     }
