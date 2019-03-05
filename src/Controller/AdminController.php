@@ -24,8 +24,8 @@ class AdminController extends AbstractController {
     public function login(Request $request, SessionInterface $session) {
 
          $user = new \App\Entity\User();
-        
-        
+
+
         $form = $this->createFormBuilder($user)
                 ->add('login', TextType::class)
                 ->add('password', PasswordType::class,['label' => 'Hasło', 'help' => 'Pisz tu'])
@@ -36,7 +36,7 @@ class AdminController extends AbstractController {
 
         if ($form->isSubmitted() && $form->isValid()) {
             $user = $form->getData();
-            
+
             var_dump($user);
             exit();
 
