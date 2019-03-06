@@ -27,9 +27,9 @@ class AdminController extends AbstractController {
 
 
         $form = $this->createFormBuilder($user)
-                ->add('login', TextType::class)
+                ->add('login', TextType::class, ['help' =>'wpisz tu login'])
                 ->add('password', PasswordType::class,['label' => 'Hasło', 'help' => 'Pisz tu'])
-                ->add('submit', SubmitType::class, ['label' => 'Wyślij'])
+                ->add('submit', SubmitType::class, ['label' => 'Wyślij', 'block_name' => 'test'])
                 ->getForm();
 
         $form->handleRequest($request);
@@ -37,8 +37,6 @@ class AdminController extends AbstractController {
         if ($form->isSubmitted() && $form->isValid()) {
             $user = $form->getData();
 
-            var_dump($user);
-            exit();
 
             return $this->redirectToRoute('panel');
         }

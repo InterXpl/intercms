@@ -23,13 +23,10 @@
 {% block nav %}{% endblock %}
 
 {% block body %}
-<form class="form-signin">
   <h1 class="h3 mb-3 font-weight-normal">Zaloguj się</h1>
+  
 {{ form_start(form) }}
-
 {{ form_end(form) }}
 
-
 <p class="mt-5 mb-3 text-muted">&copy; {{ "now"|date("Y") }}</p>
-</form>
 {% endblock %}
