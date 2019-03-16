@@ -36,7 +36,8 @@ class AdminController extends AbstractController {
 
         if ($form->isSubmitted() && $form->isValid()) {
             $user = $form->getData();
-
+            
+            $this->addFlash('notice', 'Udało się zalogować. Witaj '.$user->login);
 
             return $this->redirectToRoute('panel');
         }

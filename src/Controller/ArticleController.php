@@ -35,6 +35,10 @@ class ArticleController extends AbstractController
           'title' => 'artykuł 4',
           'content' => 'Zawartość artykułu 4',
         ],
+        [
+          'title' => 'artykuł 5',
+          'content' => 'Zawartość artykułu 4',
+        ],
       ];
 
       return $this->render('article/index.html.twig',[
