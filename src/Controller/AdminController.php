@@ -27,7 +27,7 @@ class AdminController extends AbstractController {
 
 
         $form = $this->createFormBuilder($user)
-                ->add('login', TextType::class, ['help' =>'wpisz tu login'])
+                ->add('email', TextType::class, ['help' =>'wpisz tu email'])
                 ->add('password', PasswordType::class,['label' => 'Hasło', 'help' => 'Pisz tu'])
                 ->add('submit', SubmitType::class, ['label' => 'Wyślij', 'block_name' => 'test'])
                 ->getForm();
@@ -36,8 +36,14 @@ class AdminController extends AbstractController {
 
         if ($form->isSubmitted() && $form->isValid()) {
             $user = $form->getData();
-            
-            $this->addFlash('notice', 'Udało się zalogować. Witaj '.$user->login);
+//            $user->setRoles(['ROLE_ADMIN']);
+//            $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+//            $user = $this->getUser();
+//            $entityManager = $this->getDoctrine()->getManager();
+//            $entityManager->persist($user);
+//            $entityManager->flush();
+//            dd($user);
+            $this->addFlash('notice', 'Udało się zalogować. Witaj '.$user->getEmail());
 
             return $this->redirectToRoute('panel');
         }
