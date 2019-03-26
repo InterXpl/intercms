@@ -36,8 +36,8 @@ class AdminController extends AbstractController {
 
         if ($form->isSubmitted() && $form->isValid()) {
             $user = $form->getData();
-//            $user->setRoles(['ROLE_ADMIN']);
-//            $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+           // $user->setRoles(['ROLE_ADMIN']);
+           // $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
 //            $user = $this->getUser();
 //            $entityManager = $this->getDoctrine()->getManager();
 //            $entityManager->persist($user);
